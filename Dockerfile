@@ -1,4 +1,4 @@
-FROM armv7/armhf-ubuntu
+FROM ubuntu
 RUN apt-get update && \
   apt-get upgrade && \
   apt-get install bash && \
