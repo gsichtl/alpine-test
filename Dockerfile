@@ -1,7 +1,6 @@
-FROM ubuntu
-RUN apt-get update && \
-  apt-get upgrade && \
-  apt-get install bash && \
-  apt-get remove --purge -y $BUILD_PACKAGES $(apt-mark showauto) && \
-  rm -rf /var/lib/apt/lists/*
+FROM alpine
+RUN apk update && \
+    apk upgrade && \
+    apk install bash && \
+    rm -rf /var/lib/apt/lists/*
 EXPOSE 81
