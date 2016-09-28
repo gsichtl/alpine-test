@@ -1,6 +1,3 @@
 FROM alpine
-RUN apk update && \
-    apk upgrade && \
-    apk install bash && \
-    rm -rf /var/lib/apt/lists/*
-EXPOSE 81
+RUN apk --update add bash && rm -f /var/cache/apk/* && \
+EXPOSE 3300
